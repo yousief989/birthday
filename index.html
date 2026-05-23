@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>كل سنة وإنتي طيبة ي رحوومة 🎂</title>
+  <meta name="description" content="ركن صغير معمول مخصوص يجمع شوية تفاصيل ولحظات لطيفة 😄" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="كل سنة وإنتي طيبة ي رحوومة 🎂" />
+  <meta property="og:description" content="ركن صغير معمول مخصوص يجمع شوية تفاصيل ولحظات لطيفة 😄" />
+  <meta property="og:image"
+    content="https://res.cloudinary.com/dsjqrrbkk/image/upload/v1779392090/rahoma_birthday.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#fdfbf7" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <!-- Feather Icons for lucide-react alternative -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/tailwind-config.js"></script>
+</head>
+
+<body class="bg-background text-foreground overflow-x-hidden min-h-screen relative font-sans">
+
+  <!-- Mobile Warning Screen -->
+  <div id="mobile-warning"
+    class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-md bg-black/60 transition-opacity duration-500 opacity-0">
+    <div id="mobile-warning-content"
+      class="bg-gradient-to-br from-[#fff0f5] to-[#fce4ec] w-full max-w-sm rounded-3xl p-6 md:p-8 relative shadow-[0_20px_50px_rgba(216,27,96,0.3)] border-4 border-dashed border-[#d81b60] transform scale-90 rotate-[-2deg] transition-all duration-500">
+
+      <!-- Washi Tapes -->
+      <div class="absolute -top-4 left-6 w-20 h-8 bg-[#ffd4a3] opacity-90 rotate-[-6deg] shadow-sm z-10"></div>
+      <div class="absolute -bottom-4 right-6 w-20 h-8 bg-[#f48fb1] opacity-90 rotate-[6deg] shadow-sm z-10"></div>
+      
+      <!-- Emojis -->
+      <div class="absolute -top-6 -right-4 text-4xl animate-bounce z-20">💻</div>
+      <div class="absolute -bottom-6 -left-4 text-4xl animate-[pulse_2s_infinite] z-20">🚨</div>
+
+      <!-- Content -->
+      <div class="text-center relative z-10 bg-white/70 rounded-2xl p-6 border-2 border-dashed border-[#f48fb1] backdrop-blur-sm mt-4 mb-2">
+        <h2 class="font-handwritten text-3xl md:text-4xl text-[#d81b60] font-bold leading-relaxed mb-4 drop-shadow-sm">
+          أنا مش قولتلك تفتحيه من اللاب 😭💻
+        </h2>
+
+        <div class="bg-white rounded-xl p-4 mb-4 shadow-sm border border-pink-200 rotate-1">
+          <p class="font-sans text-lg text-[#4a3f4e] mb-2 font-bold leading-relaxed">
+            مفيش دخول من الموبايل... روحي افتحيه من اللاب 😌
+          </p>
+          <p class="font-handwritten text-3xl text-[#d81b60] font-bold animate-pulse mt-2">
+            مستنيكي هناك 💜
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Loading Screen -->
+  <div id="loading-screen"
+    class="fixed inset-0 bg-gradient-to-br from-warm-beige to-cream flex items-center justify-center z-50 transition-opacity duration-500">
+    <div class="text-center">
+      <div class="text-6xl mb-6 animate-[spin_2s_linear_infinite]">🎂</div>
+      <h2 id="loading-text" class="font-heading text-soft-brown mb-4">جارِ تحميل الذكريات...</h2>
+      <div class="w-64 h-2 bg-white/50 rounded-full overflow-hidden mx-auto">
+        <div id="loading-bar" class="h-full bg-gradient-to-r from-primary to-accent w-0 transition-all duration-300">
+        </div>
+      </div>
+      <p id="loading-percentage" class="mt-4 text-sm text-soft-brown opacity-60">0%</p>
+    </div>
+  </div>
+
+  <!-- Login Screen -->
+  <div id="login-screen"
+    class="hidden fixed inset-0 bg-background flex items-center justify-center p-4 z-40 transition-opacity duration-500">
+    <!-- Floating decorations -->
+    <div class="absolute top-10 right-10 text-4xl opacity-20 animate-bounce">🎂</div>
+    <div class="absolute bottom-20 left-20 text-3xl opacity-20 animate-pulse">🎈</div>
+    <div class="absolute top-1/3 left-10 text-2xl opacity-20">✨</div>
+
+    <div
+      class="bg-white/80 backdrop-blur-sm p-8 rounded-3xl shadow-2xl max-w-md w-full relative border-4 border-warm-beige"
+      style="background-image: url('data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h40v40H0z\' fill=\'none\'/%3E%3Cpath d=\'M20 0v40M0 20h40\' stroke=\'%23F5EBE0\' stroke-width=\'0.5\' opacity=\'0.3\'/%3E%3C/svg%3E')">
+      <!-- Washi tape decoration -->
+      <div
+        class="absolute -top-4 left-1/4 right-1/4 h-8 bg-gradient-to-r from-dusty-pink/40 via-white/60 to-dusty-pink/40 rotate-1 border-y border-white/60">
+      </div>
+
+      <div class="text-center mb-6 relative">
+        <div class="inline-block mb-2 animate-bounce">
+          <span class="text-5xl drop-shadow-md">🌸</span>
+        </div>
+        <h1 class="font-handwritten text-4xl text-[#c2185b] font-bold mb-4 drop-shadow-sm">هلا بالرحووم ✨</h1>
+
+        <div
+          class="bg-[#fff9fa] border border-[#fce4ec] rounded-2xl p-6 shadow-inner text-base md:text-lg text-[#6d5b53] leading-loose relative text-center font-medium"
+          dir="rtl">
+          <div class="absolute -top-3 -left-3 text-2xl opacity-60 transform -rotate-12">💜</div>
+          <div class="absolute -bottom-3 -right-3 text-2xl opacity-60 transform rotate-12">☕</div>
+          <p>المكان ده معمول مخصوص لشخص مميز جدا 😌💜</p>
+        </div>
+      </div>
+
+      <form id="login-form" class="space-y-4" dir="rtl">
+        <div>
+          <label class="block mb-2 text-soft-brown font-bold text-right">مين الكائن المميز؟ 👤</label>
+          <input type="text" id="username"
+            class="w-full px-4 py-3 rounded-2xl bg-cream border-2 border-warm-beige focus:border-[#d81b60] focus:ring-2 focus:ring-[#fce4ec] focus:outline-none transition-all placeholder-gray-400 font-sans"
+            placeholder="اكتبي اسمك هنا..." />
+        </div>
+
+        <div>
+          <label class="block mb-2 text-soft-brown font-bold text-right">الباسورد السحرية 🔐</label>
+          <input type="password" id="password"
+            class="w-full px-4 py-3 rounded-2xl bg-cream border-2 border-warm-beige focus:border-[#d81b60] focus:ring-2 focus:ring-[#fce4ec] focus:outline-none transition-all placeholder-gray-400 font-sans"
+            placeholder="الباسورد هي..." />
+        </div>
+
+        <div id="login-error"
+          class="hidden text-destructive text-center p-3 bg-red-100 rounded-xl transition-all font-bold">
+        </div>
+        <div id="login-success"
+          class="hidden text-green-600 text-center p-3 bg-green-50 rounded-xl flex items-center justify-center gap-2 transition-all font-bold">
+          <i data-feather="star" class="w-5 h-5"></i>
+          <span>تم التحقق من الشطورة بنجاح ✅</span>
+        </div>
+
+        <button type="submit" id="login-btn"
+          class="w-full bg-gradient-to-r from-[#f48fb1] to-[#d81b60] text-white py-4 mt-2 rounded-2xl hover:shadow-[0_0_15px_rgba(216,27,96,0.3)] transition-all flex items-center justify-center gap-2 font-bold text-lg hover:-translate-y-1">
+          افتحي البوابة ✨
+        </button>
+      </form>
+
+      <!-- Corner decorations -->
+      <div class="absolute -bottom-2 -right-2 text-3xl opacity-30 rotate-12">⭐</div>
+      <div class="absolute -top-2 -left-2 text-2xl opacity-30 -rotate-12">💫</div>
+    </div>
+  </div>
+
+  <!-- Achievement Popup -->
+  <div id="achievement-popup"
+    class="hidden fixed top-8 left-1/2 -translate-x-1/2 z-50 bg-gradient-to-r from-primary to-accent text-white px-6 py-4 rounded-2xl shadow-2xl flex items-center gap-3 transition-all duration-300 transform scale-90 opacity-0">
+    <i data-feather="star" class="w-6 h-6"></i>
+    <span id="achievement-text" class="font-handwritten"></span>
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content" class="hidden opacity-0 transition-opacity duration-1000">
+    <!-- Hero Section -->
+    <section data-cursor="tea"
+      class="min-h-screen flex items-center justify-center relative overflow-hidden px-4 py-20 bg-gradient-to-b from-[#fdfbf7] to-[#fff4e6]">
+      <!-- Scrapbook Grid Pattern -->
+      <div class="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style="background-image: linear-gradient(#d4a59a 1px, transparent 1px), linear-gradient(90deg, #d4a59a 1px, transparent 1px); background-size: 40px 40px;">
+      </div>
+
+      <!-- Floating decorations -->
+      <div class="absolute top-[10%] right-[10%] text-dusty-pink opacity-50 animate-float-slow">
+        <i data-feather="heart" class="w-12 h-12 fill-current"></i>
+      </div>
+      <div class="absolute top-[25%] left-[15%] text-accent opacity-60 animate-float-delayed">
+        <i data-feather="star" class="w-10 h-10 fill-current"></i>
+      </div>
+      <div class="absolute bottom-[20%] right-[20%] text-dusty-pink opacity-50 animate-float-slow">
+        <i data-feather="smile" class="w-10 h-10"></i>
+      </div>
+      <div class="absolute top-[40%] left-[10%] text-accent opacity-40 animate-pulse">
+        <i data-feather="coffee" class="w-8 h-8"></i>
+      </div>
+
+      <div class="absolute bottom-[10%] left-[25%] text-primary opacity-30 animate-bounce">
+        <i data-feather="music" class="w-8 h-8"></i>
+      </div>
+
+      <div class="relative z-10 text-center max-w-5xl mx-auto flex flex-col items-center">
+        <!-- Main Scrapbook Title Card -->
+        <div
+          class="relative bg-white p-8 md:p-14 rounded-3xl shadow-xl border-4 border-dashed border-[#e8d5c4] transform rotate-1 fade-in-up">
+          <!-- Washi Tape -->
+          <div class="absolute -top-6 left-10 w-28 h-10 bg-[#ffcdd2] opacity-80 -rotate-3 mix-blend-multiply shadow-sm">
+          </div>
+          <div
+            class="absolute -bottom-5 right-10 w-24 h-8 bg-[#b2dfdb] opacity-70 rotate-6 mix-blend-multiply shadow-sm">
+          </div>
+          <div
+            class="absolute -left-5 top-1/2 w-10 h-16 bg-[#ffe082] opacity-60 -rotate-12 mix-blend-multiply shadow-sm">
+          </div>
+
+          <h1
+            class="mb-4 font-handwritten text-5xl md:text-7xl lg:text-8xl text-[#5a4a42] font-bold drop-shadow-md leading-tight relative z-10 animate-flutter">
+            كل سنة وإنتي طيبة <br class="md:hidden" />ي رحوومة 🎂
+          </h1>
+
+          <div class="w-32 h-1 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto my-6 opacity-50">
+          </div>
+
+          <p
+            class="font-sans text-xl md:text-2xl text-[#6d5b53] font-semibold opacity-90 leading-relaxed max-w-lg mx-auto animate-jiggle-slow">
+            ركن صغير معمول مخصوص يجمع شوية تفاصيل ولحظات لطيفة 😄
+          </p>
+
+          <div class="absolute -right-8 -top-8 text-6xl opacity-80 animate-jiggle-slow origin-top">🎀</div>
+        </div>
+
+        <!-- Interactive Polaroid Cards -->
+        <div class="mt-24 flex justify-center gap-8 md:gap-14 flex-wrap fade-in-up" style="animation-delay: 0.4s;">
+          <!-- Card 1 -->
+          <div
+            class="group relative w-36 h-44 bg-white p-3 shadow-xl transform -rotate-6 hover:-translate-y-4 hover:rotate-[-2deg] hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-between border border-gray-100 cursor-pointer">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-14 h-5 bg-[#ffd4a3] opacity-80 rotate-2 mix-blend-multiply shadow-sm">
+            </div>
+            <div
+              class="w-full h-28 bg-[#fff9c4] border border-dashed border-gray-300 flex items-center justify-center text-5xl group-hover:bg-[#fff59d] transition-colors shadow-inner">
+              📝
+            </div>
+            <span class="font-handwritten text-xl text-[#5a4a42] font-bold mt-2">ذكريات</span>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group relative w-36 h-44 bg-white p-3 shadow-xl transform rotate-3 hover:-translate-y-4 hover:rotate-[1deg] hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-between border border-gray-100 cursor-pointer mt-6 md:mt-0">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-14 h-5 bg-[#81c784] opacity-70 -rotate-3 mix-blend-multiply shadow-sm">
+            </div>
+            <div
+              class="w-full h-28 bg-[#f0f4c3] border border-dashed border-gray-300 flex items-center justify-center text-5xl group-hover:bg-[#e6ee9c] transition-colors shadow-inner">
+              💭
+            </div>
+            <span class="font-handwritten text-xl text-[#5a4a42] font-bold mt-2">حكاوي</span>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group relative w-36 h-44 bg-white p-3 shadow-xl transform -rotate-3 hover:-translate-y-4 hover:rotate-[-1deg] hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-between border border-gray-100 cursor-pointer">
+            <div
+              class="absolute -top-4 left-1/2 -translate-x-1/2 w-14 h-5 bg-[#f48fb1] opacity-70 rotate-1 mix-blend-multiply shadow-sm">
+            </div>
+            <div
+              class="w-full h-28 bg-[#fce4ec] border border-dashed border-gray-300 flex items-center justify-center text-5xl group-hover:bg-[#f8bbd0] transition-colors shadow-inner">
+              ✨
+            </div>
+            <span class="font-handwritten text-xl text-[#5a4a42] font-bold mt-2">مفاجآت</span>
+          </div>
+        </div>
+
+        <div
+          class="mt-20 inline-block bg-white/80 backdrop-blur-md px-8 py-4 rounded-full border border-warm-beige shadow-md">
+          <p class="font-sans text-[#8B7A6E] font-bold text-lg flex items-center gap-3">
+            <span class="animate-bounce">↓</span>
+            اكتشفي الرسائل المخبية
+            <span class="animate-bounce" style="animation-delay: 0.1s;">↓</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Mini World Section -->
+    <section data-cursor="world" id="mini-world"
+      class="py-24 px-4 relative overflow-hidden bg-gradient-to-b from-[#fff4e6] to-[#fdfbf7]">
+      <!-- Animated Background Elements -->
+      <div class="absolute top-10 left-10 text-4xl opacity-50 animate-float-slow pointer-events-none z-0">☁️</div>
+      <div class="absolute top-20 right-20 text-4xl opacity-50 animate-float-delayed pointer-events-none z-0">☁️</div>
+      <div class="absolute bottom-20 left-1/4 text-3xl opacity-40 animate-pulse pointer-events-none z-0">✨</div>
+      <div class="absolute top-1/3 right-1/4 text-3xl opacity-40 animate-pulse pointer-events-none z-0"
+        style="animation-delay: 1s">🌟</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        <div class="mb-10 text-center fade-in-up">
+          <div
+            class="inline-block px-8 py-4 bg-white rounded-2xl rotate-2 shadow-xl border-4 border-dashed border-[#f48fb1] relative">
+            <h2 class="font-handwritten text-4xl md:text-5xl text-[#d81b60] font-bold">مدينة رحومة المصغرة 🌸✨</h2>
+            <div
+              class="absolute -top-4 -left-4 w-12 h-6 bg-[#b2dfdb] opacity-70 -rotate-6 mix-blend-multiply shadow-sm">
+            </div>
+            <div
+              class="absolute -bottom-4 -right-4 w-16 h-8 bg-[#ffcdd2] opacity-80 rotate-6 mix-blend-multiply shadow-sm">
+            </div>
+          </div>
+          <p
+            class="mt-8 font-sans text-xl text-[#6d5b53] font-bold bg-white/60 inline-block px-6 py-2 rounded-xl shadow-sm border border-white">
+            جولة جوة مدينتك السرية الرايقة.. تفتكري فيها إيه؟ 😉
+          </p>
+        </div>
+
+        <!-- The Interactive Map Container -->
+        <div
+          class="relative w-full aspect-[4/3] md:aspect-[16/9] max-h-[75vh] bg-[#fcf8f2] rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-8 border-white overflow-hidden cursor-grab active:cursor-grabbing"
+          id="mini-world-container">
+
+          <!-- Washi tape corners -->
+          <div
+            class="absolute top-4 left-[-20px] w-32 h-10 bg-[#ffcdd2] opacity-80 -rotate-45 mix-blend-multiply shadow-sm z-50 pointer-events-none">
+          </div>
+          <div
+            class="absolute top-4 right-[-20px] w-32 h-10 bg-[#b2dfdb] opacity-80 rotate-45 mix-blend-multiply shadow-sm z-50 pointer-events-none">
+          </div>
+          <div
+            class="absolute bottom-4 left-[-20px] w-32 h-10 bg-[#ffe082] opacity-80 rotate-45 mix-blend-multiply shadow-sm z-50 pointer-events-none">
+          </div>
+          <div
+            class="absolute bottom-4 right-[-20px] w-32 h-10 bg-[#ce93d8] opacity-80 -rotate-45 mix-blend-multiply shadow-sm z-50 pointer-events-none">
+          </div>
+
+          <!-- Interactive Map Surface -->
+          <div id="mini-world-map"
+            class="absolute w-full h-full left-0 top-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h60v60H0z\' fill=\'none\'/%3E%3Cpath d=\'M30 0v60M0 30h60\' stroke=\'%23e8d5c4\' stroke-width=\'2\' opacity=\'0.4\' stroke-dasharray=\'4 4\'/%3E%3C/svg%3E')] transition-transform duration-300 ease-out origin-center">
+
+            <!-- Map Paths/Roads (SVG) -->
+            <svg class="absolute inset-0 w-full h-full pointer-events-none opacity-40" viewBox="0 0 1000 1000"
+              preserveAspectRatio="none">
+              <!-- Farm to Tiktok to Cafe -->
+              <path d="M 200 650 Q 150 550 350 500 T 150 250" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <!-- Cafe to Detective to Studio -->
+              <path d="M 150 250 Q 300 200 500 150 T 750 300" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <!-- Studio to Mall to Factory -->
+              <path d="M 750 300 Q 850 350 800 450 T 850 800" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <!-- Factory to Clinic to Farm -->
+              <path d="M 850 800 Q 700 850 500 750 T 200 650" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <!-- Cross roads -->
+              <path d="M 350 500 Q 400 600 500 750" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <path d="M 350 500 Q 400 350 500 150" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <path d="M 350 500 Q 550 450 800 500" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <path d="M 150 850 Q 350 700 500 750" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <!-- Extra connections for new buildings -->
+              <path d="M 850 250 Q 750 200 500 150" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <path d="M 200 300 Q 150 450 100 550" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+              <path d="M 100 550 Q 150 700 150 800" fill="none" stroke="#d4a59a" stroke-width="8"
+                stroke-dasharray="15 15" stroke-linecap="round" />
+            </svg>
+
+            <!-- Buildings injected by JS will go here -->
+            <div id="mini-world-buildings" class="absolute inset-0 w-full h-full"></div>
+
+            <!-- Particles layer -->
+            <div id="mini-world-particles" class="absolute inset-0 w-full h-full pointer-events-none z-30"></div>
+          </div>
+
+          <!-- Bouquet Progress UI -->
+          <div id="bouquet-progress"
+            class="absolute top-6 left-6 bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border-2 border-dashed border-[#f48fb1] z-40 flex items-center gap-4 transition-transform duration-300 transform -translate-x-full opacity-0 pointer-events-none">
+            <div class="text-4xl relative w-12 h-12 flex items-center justify-center">
+              🏺
+              <div id="flower-emojis"
+                class="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-wrap-reverse justify-center w-16 pointer-events-none -space-x-3 text-2xl">
+              </div>
+            </div>
+            <div class="flex flex-col text-right">
+              <span class="font-handwritten text-lg text-[#d81b60] font-bold">بنجيب ورد! 🌷</span>
+              <span class="font-sans text-sm text-[#6d5b53] font-bold"><span id="flower-count">0</span> / 16</span>
+            </div>
+          </div>
+
+          <!-- UI Controls -->
+          <div class="absolute bottom-6 right-6 flex flex-col gap-3 z-40">
+            <button id="zoom-in-world"
+              class="w-12 h-12 bg-white rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.1)] flex items-center justify-center text-[#5a4a42] hover:bg-[#fce4ec] transition-colors border-2 border-[#f48fb1]">
+              <i data-feather="plus"></i>
+            </button>
+            <button id="zoom-out-world"
+              class="w-12 h-12 bg-white rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.1)] flex items-center justify-center text-[#5a4a42] hover:bg-[#fce4ec] transition-colors border-2 border-[#f48fb1]">
+              <i data-feather="minus"></i>
+            </button>
+            <button id="reset-world"
+              class="w-12 h-12 bg-white rounded-full shadow-[0_5px_15px_rgba(0,0,0,0.1)] flex items-center justify-center text-[#5a4a42] hover:bg-[#fce4ec] transition-colors border-2 border-[#f48fb1]"
+              title="Reset Map">
+              <i data-feather="maximize"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Note Modal (Used by Mini World) -->
+    <div id="note-modal"
+      class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 px-4 opacity-0 pointer-events-none transition-opacity duration-300">
+      <div id="note-modal-content"
+        class="bg-white p-8 md:p-10 rounded-2xl shadow-2xl max-w-lg w-full relative transform scale-90 translate-y-10 rotate-[-5deg] transition-all duration-300">
+        <button id="close-modal-btn" class="absolute top-4 left-4 p-2 rounded-full hover:bg-black/10 transition-colors"
+          aria-label="Close">
+          <i data-feather="x" class="w-6 h-6"></i>
+        </button>
+        <div class="mt-8">
+          <h3 id="modal-label" class="mb-6 text-center font-handwritten text-3xl text-[#444] leading-relaxed">
+          </h3>
+          <p id="modal-message" class="text-center font-sans text-xl leading-loose text-[#333]">
+          </p>
+          <div id="modal-image-container" class="hidden mt-6 flex justify-center">
+            <img id="modal-image" src="" alt="Secret Image"
+              class="max-w-full max-h-[300px] rounded-xl shadow-md border-4 border-white rotate-2 hover:rotate-0 transition-transform duration-300" />
+          </div>
+        </div>
+        <!-- Decorative corner -->
+        <div class="absolute bottom-4 right-4 w-8 h-8 bg-black opacity-10 rotate-45"></div>
+      </div>
+    </div>
+
+    <!-- Dictionary Section -->
+    <section data-cursor="chocolate" id="rahma-dictionary" class="py-24 px-4 relative overflow-hidden bg-[#fdfbf7]">
+      <!-- Decorative background elements -->
+      <div class="absolute top-10 right-[10%] opacity-40 text-4xl animate-[bounce_4s_infinite]">✨</div>
+      <div class="absolute bottom-20 left-[15%] opacity-30 text-5xl animate-[pulse_3s_infinite]">💖</div>
+      <div class="absolute top-40 left-[10%] opacity-40 text-3xl animate-[spin_10s_linear_infinite]">🌸</div>
+      <div class="absolute bottom-40 right-[15%] opacity-30 text-4xl animate-[bounce_5s_infinite]">🎀</div>
+
+      <div class="max-w-6xl mx-auto relative z-10">
+        <!-- Section title -->
+        <div class="mb-24 text-center fade-in-up relative flex flex-col items-center">
+          <div
+            class="inline-block px-10 py-5 bg-[#fff4f6] rounded-xl rotate-[-2deg] shadow-lg border-2 border-dashed border-[#f8bbd0] relative">
+            <h2 class="font-handwritten text-4xl md:text-5xl text-[#5a4a42]">قاموس رحومة الرسمي 📖</h2>
+            <!-- Washi tape -->
+            <div
+              class="absolute -top-4 right-1/2 translate-x-1/2 w-32 h-8 bg-[#ffcdd2] opacity-80 rotate-[-3deg] mix-blend-multiply shadow-sm">
+            </div>
+            <div
+              class="absolute -bottom-3 left-4 w-16 h-6 bg-[#b2dfdb] opacity-70 rotate-[5deg] mix-blend-multiply shadow-sm">
+            </div>
+          </div>
+          <p
+            class="mt-8 font-sans text-xl md:text-2xl text-[#6d5b53] rotate-1 font-bold bg-white/60 px-4 py-2 rounded-lg shadow-sm border border-white">
+            "أشهر ردود رحومة اللي بتخلص بيها أي حوار 😂"
+          </p>
+        </div>
+
+        <!-- Dictionary Grid -->
+        <div id="dictionary-grid" class="flex flex-wrap justify-center gap-12 md:gap-16 relative">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Warning Section (Hidden Easter Egg) -->
+    <section
+      class="py-24 px-4 relative flex justify-center items-center flex-col min-h-[40vh] overflow-hidden bg-[#fffdfa]">
+      <!-- Tape -->
+      <div
+        class="absolute top-10 left-1/2 -translate-x-1/2 w-80 h-10 bg-yellow-400/90 rotate-[-2deg] mix-blend-multiply flex items-center justify-around overflow-hidden shadow-sm z-0">
+        <span class="text-black font-bold text-sm uppercase opacity-60 tracking-widest">WARNING</span>
+        <span class="text-black font-bold text-sm uppercase opacity-60 tracking-widest">WARNING</span>
+        <span class="text-black font-bold text-sm uppercase opacity-60 tracking-widest">WARNING</span>
+      </div>
+      <div
+        class="absolute bottom-10 left-1/2 -translate-x-1/2 w-80 h-10 bg-yellow-400/90 rotate-[3deg] mix-blend-multiply flex items-center justify-around overflow-hidden shadow-sm z-0">
+        <span class="text-black font-bold text-sm uppercase opacity-60 tracking-widest">DANGER</span>
+        <span class="text-black font-bold text-sm uppercase opacity-60 tracking-widest">DANGER</span>
+        <span class="text-black font-bold text-sm uppercase opacity-60 tracking-widest">DANGER</span>
+      </div>
+
+      <!-- Button -->
+      <div data-cursor="chaos" class="relative group cursor-pointer z-10" id="danger-button">
+        <!-- Button Background -->
+        <div
+          class="absolute inset-0 bg-[#f8bbd0] rounded-2xl transform rotate-3 shadow-lg transition-transform group-hover:rotate-6">
+        </div>
+        <div
+          class="absolute inset-0 bg-[#f48fb1] rounded-2xl transform -rotate-2 shadow-md transition-transform group-hover:-rotate-4">
+        </div>
+        <!-- Main Button -->
+        <div
+          class="relative bg-[#fff0f5] border-4 border-dashed border-[#d81b60] rounded-2xl px-12 py-8 transform transition-transform group-hover:-translate-y-1 active:translate-y-2 flex flex-col items-center shadow-xl">
+          <span class="font-handwritten text-4xl md:text-5xl text-[#d81b60] font-bold">ماتدوسيش هنا 🎀</span>
+          <span
+            class="absolute -right-6 -bottom-6 text-4xl rotate-12 transition-transform group-hover:scale-125">🤫</span>
+          <span class="absolute -left-6 -top-6 text-4xl -rotate-12 animate-bounce">✨</span>
+          <!-- Tiny doodle -->
+          <svg class="absolute top-2 right-2 w-6 h-6 text-[#f48fb1] opacity-70" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+          </svg>
+        </div>
+      </div>
+    </section>
+    <!-- Mood Cassette Section -->
+    <section data-cursor="music" id="mood-cassette-section"
+      class="py-20 px-4 relative overflow-hidden bg-white/50 backdrop-blur-sm border-y-4 border-dashed border-[#fce4ec]">
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+
+        <div class="mb-12 fade-in-up">
+          <div
+            class="inline-block px-10 py-4 bg-[#fff0f5] rounded-3xl rotate-[-2deg] shadow-lg border-4 border-dashed border-[#d81b60] relative">
+            <h2 class="font-handwritten text-4xl md:text-5xl text-[#d81b60] font-bold">شريط المودات 📼</h2>
+            <div
+              class="absolute -top-4 right-8 w-16 h-6 bg-white/80 rotate-[5deg] shadow-sm border border-white backdrop-blur-sm">
+            </div>
+          </div>
+          <p
+            class="mt-6 font-sans text-xl md:text-2xl text-[#6d5b53] font-bold bg-white/80 inline-block px-6 py-3 rounded-2xl shadow-sm border border-[#fce4ec] max-w-lg leading-relaxed">
+            اختاري المود بتاعك دلوقتي وشغلي الشريط عشان تشوفي الرسالة اللي تناسبك! 🎧
+          </p>
+        </div>
+
+        <div class="flex flex-col items-center gap-10">
+
+          <!-- The Cassette Player -->
+          <div
+            class="relative w-80 md:w-96 h-48 md:h-56 bg-[#ffb6c1] rounded-2xl shadow-xl border-4 border-white flex flex-col items-center justify-center p-4 transform hover:scale-105 transition-transform duration-300 mx-auto">
+            <!-- Top screws -->
+            <div class="absolute top-2 left-2 w-3 h-3 bg-white/50 rounded-full flex justify-center items-center">
+              <div class="w-2 h-0.5 bg-gray-400 rotate-45"></div>
+            </div>
+            <div class="absolute top-2 right-2 w-3 h-3 bg-white/50 rounded-full flex justify-center items-center">
+              <div class="w-2 h-0.5 bg-gray-400 -rotate-45"></div>
+            </div>
+
+            <!-- Sticker Label -->
+            <div
+              class="w-full h-full bg-[#fffdfa] rounded-xl border-2 border-[#f48fb1] shadow-inner relative flex flex-col items-center pt-2">
+              <div
+                class="w-full bg-[#f8bbd0] h-6 border-b-2 border-dashed border-[#f48fb1] mb-2 flex justify-center items-center">
+                <span class="font-handwritten text-sm text-[#d81b60] font-bold tracking-widest">RAHMA'S MIXTAPE</span>
+              </div>
+
+              <!-- Reels Window -->
+              <div
+                class="w-56 h-20 bg-gray-800 rounded-lg shadow-inner flex justify-between items-center px-4 relative overflow-hidden border-2 border-gray-600">
+                <!-- Left Reel -->
+                <div id="left-reel"
+                  class="w-12 h-12 bg-white rounded-full flex justify-center items-center shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-transform duration-75">
+                  <div class="w-4 h-4 bg-gray-800 rounded-full"></div>
+                  <div class="absolute w-1 h-12 bg-gray-800"></div>
+                  <div class="absolute w-12 h-1 bg-gray-800"></div>
+                </div>
+                <!-- Right Reel -->
+                <div id="right-reel"
+                  class="w-12 h-12 bg-white rounded-full flex justify-center items-center shadow-[inset_0_0_10px_rgba(0,0,0,0.5)] transition-transform duration-75">
+                  <div class="w-4 h-4 bg-gray-800 rounded-full"></div>
+                  <div class="absolute w-1 h-12 bg-gray-800"></div>
+                  <div class="absolute w-12 h-1 bg-gray-800"></div>
+                </div>
+                <!-- Center Tape -->
+                <div
+                  class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-12 bg-gray-800 flex justify-center items-center">
+                  <div class="w-full h-4 bg-[#8d6e63] opacity-40"></div>
+                </div>
+              </div>
+
+              <!-- Bottom shape -->
+              <div
+                class="absolute bottom-0 w-48 h-8 bg-[#ffb6c1] rounded-t-lg border-t-2 border-x-2 border-white flex justify-center items-center gap-4">
+                <div class="w-4 h-4 bg-gray-900 rounded-full shadow-inner"></div>
+                <div class="w-4 h-4 bg-gray-900 rounded-full shadow-inner"></div>
+              </div>
+            </div>
+
+            <!-- Bottom screws -->
+            <div class="absolute bottom-2 left-2 w-3 h-3 bg-white/50 rounded-full flex justify-center items-center">
+              <div class="w-2 h-0.5 bg-gray-400 rotate-12"></div>
+            </div>
+            <div class="absolute bottom-2 right-2 w-3 h-3 bg-white/50 rounded-full flex justify-center items-center">
+              <div class="w-2 h-0.5 bg-gray-400 rotate-90"></div>
+            </div>
+          </div>
+
+          <!-- Output Message -->
+          <div id="cassette-message-box"
+            class="w-full max-w-lg min-h-[100px] bg-[#fff9c4] border-4 border-dashed border-[#fbc02d] rounded-2xl p-6 shadow-md relative transform scale-95 opacity-50 transition-all duration-300">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-[#ffcdd2] rotate-[2deg] shadow-sm"></div>
+            <p id="cassette-message-text"
+              class="font-handwritten text-2xl md:text-3xl text-[#5a4a42] font-bold leading-relaxed">
+              الشريط واقف.. اختاري المود عشان يشتغل! ⏸️
+            </p>
+          </div>
+
+          <!-- Buttons -->
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4 w-full max-w-2xl mx-auto">
+            <button
+              class="mood-btn bg-white border-2 border-[#b2dfdb] hover:bg-[#e0f2f1] text-[#00695c] font-sans font-bold text-lg py-3 px-4 rounded-xl shadow-sm transition-transform hover:-translate-y-1"
+              data-mood="chill">
+              ☕ رايقة زيادة عن اللزوم </button>
+            <button
+              class="mood-btn bg-white border-2 border-[#ef9a9a] hover:bg-[#ffebee] text-[#c62828] font-sans font-bold text-lg py-3 px-4 rounded-xl shadow-sm transition-transform hover:-translate-y-1"
+              data-mood="angry">
+              🤨 ناقص تضربي حد </button>
+            <button
+              class="mood-btn bg-white border-2 border-[#bcaaa4] hover:bg-[#efebe9] text-[#4e342e] font-sans font-bold text-lg py-3 px-4 rounded-xl shadow-sm transition-transform hover:-translate-y-1"
+              data-mood="sleepy">
+              😴 البطارية 1% </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Medical Certificate Section -->
+    <section
+      class="py-20 px-4 relative flex justify-center items-center overflow-hidden bg-gradient-to-b from-[#fdfbf7] to-[#fff0f5]">
+      <!-- Decor -->
+      <div class="absolute top-10 left-10 text-5xl md:text-6xl opacity-40 animate-bounce drop-shadow-sm">💊</div>
+      <div class="absolute bottom-10 right-10 text-5xl md:text-6xl opacity-40 animate-pulse drop-shadow-sm">🩺</div>
+      <div class="absolute top-20 right-20 text-5xl md:text-6xl opacity-40 rotate-45 drop-shadow-sm">💉</div>
+
+      <div class="max-w-3xl w-full relative z-20 fade-in-up">
+        <!-- Certificate Card -->
+        <div
+          class="bg-white/80 backdrop-blur-md rounded-3xl shadow-xl p-6 md:p-12 border-4 border-dashed border-[#d81b60] relative rotate-[2deg] transition-transform hover:rotate-0 duration-300">
+          <!-- Washi Tapes for the card itself -->
+          <div class="absolute -top-4 left-10 w-24 h-8 bg-[#ffd4a3] opacity-80 rotate-[-4deg] shadow-sm"></div>
+          <div class="absolute -bottom-4 right-10 w-24 h-8 bg-[#f48fb1] opacity-80 rotate-[4deg] shadow-sm"></div>
+
+          <!-- Stamp -->
+          <div
+            class="absolute -top-8 -right-4 md:-right-8 w-28 h-28 border-4 border-dashed border-[#d81b60] rounded-full flex items-center justify-center opacity-90 -rotate-12 bg-[#fff0f5] shadow-md z-30 mix-blend-multiply animate-stamp"
+            style="animation-delay: 0.5s;">
+            <span class="text-[#d81b60] font-bold font-sans text-xl md:text-2xl transform rotate-12">مختوم 💯</span>
+          </div>
+
+          <h2
+            class="font-handwritten text-4xl md:text-5xl text-[#d81b60] font-bold text-center mb-8 border-b-2 border-dashed border-[#f48fb1] pb-4">
+            شهادة طبية معتمدة 🩺
+          </h2>
+
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <div class="w-full md:w-1/2">
+              <div
+                class="bg-white p-4 rounded-xl -rotate-3 shadow-lg border-2 border-pink-100 relative hover:animate-wiggle cursor-pointer transition-colors hover:border-[#f48fb1]">
+                <!-- Washi Tape for image -->
+                <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-6 bg-purple-200/80 shadow-sm rotate-2">
+                </div>
+
+                <img src="images/kanola.jpg" alt="Kanola"
+                  class="w-full h-auto rounded-lg object-cover shadow-sm max-h-[280px]">
+                <p class="text-center font-handwritten text-[#9c27b0] mt-4 text-2xl font-bold">دليل الإدانة 📸</p>
+              </div>
+            </div>
+
+            <div class="w-full md:w-1/2 space-y-5">
+              <p
+                class="font-sans text-xl md:text-2xl text-[#4a3f4e] leading-relaxed font-bold bg-[#fce4ec] p-3 rounded-xl border border-pink-200">
+                <span class="text-[#d81b60]">الاسم:</span> رحمة 💜
+              </p>
+              <p
+                class="font-sans text-xl md:text-2xl text-[#4a3f4e] leading-relaxed font-bold bg-[#fce4ec] p-3 rounded-xl border border-pink-200">
+                <span class="text-[#d81b60]">اللقب الممنوح:</span> أكتر واحدة بيجيلها برد وبتركب كانولا في التاريخ 🧣💉
+              </p>
+              <p
+                class="font-sans text-xl md:text-2xl text-[#d81b60] leading-relaxed font-bold mt-6 p-4 bg-white rounded-xl shadow-sm border-2 border-dashed border-pink-200">
+                تُمنح رحوومة هذا اللقب بامتياز نظرا لأن مناعتها واخدة إجازة مفتوحة ومقضياها اختراعات في المشروبات
+                الدافية عشان البرد 😂
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Impossible Gift Section -->
+    <section data-cursor="gift" id="impossible-gift"
+      class="py-8 md:py-12 px-4 relative flex justify-center items-center h-[100vh] overflow-hidden bg-gradient-to-br from-[#fdfbf7] via-[#f3e8fd] to-[#fdecf3]">
+
+      <!-- Dreamy Magic Glow -->
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.6)_0%,transparent_70%)] pointer-events-none">
+      </div>
+
+      <!-- Party Particles -->
+      <div class="absolute top-20 left-[10%] text-5xl opacity-60 animate-pulse z-10">🎈</div>
+      <div class="absolute bottom-40 right-[15%] text-6xl opacity-50 animate-bounce z-10">🎁</div>
+      <div class="absolute top-1/3 right-[10%] text-5xl opacity-70 animate-bounce z-10">🎉</div>
+      <div class="absolute bottom-20 left-[20%] text-5xl opacity-40 animate-pulse z-10">🎊</div>
+
+      <!-- Decor -->
+      <div class="max-w-3xl w-full relative z-20 fade-in-up">
+
+        <!-- Magic Glass Card -->
+        <div
+          class="bg-white/40 backdrop-blur-xl rounded-[2rem] p-6 md:p-10 shadow-xl border-2 border-white/70 relative flex flex-col items-center text-center overflow-visible"
+          id="gift-card-container">
+
+          <!-- Magical Floating Gift -->
+          <div
+            class="absolute -top-16 left-1/2 -translate-x-1/2 w-32 h-32 flex items-center justify-center animate-bounce z-30">
+            <div class="absolute inset-0 bg-gradient-to-tr from-[#f3e8fd] to-[#fdecf3] rounded-full blur-xl opacity-80">
+            </div>
+            <span class="text-7xl relative z-40">🎁</span>
+          </div>
+
+          <!-- Iridescent Title -->
+          <h2 class="font-handwritten text-3xl md:text-5xl font-bold mb-4 mt-8 leading-relaxed drop-shadow-sm">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#9c27b0] to-[#e91e63]">أهم زرار في الموقع
+              كله</span> 🎁✨
+          </h2>
+
+          <div class="w-24 h-1 bg-gradient-to-r from-transparent via-[#e91e63] to-transparent mx-auto mb-6 opacity-40">
+          </div>
+
+          <!-- Spell Scroll inner area -->
+          <div class="bg-white/60 rounded-2xl p-5 md:p-6 shadow-sm border border-white/80 relative">
+            <div class="absolute -top-4 -left-4 text-3xl opacity-50 transform -rotate-12 animate-[pulse_2s_infinite]">✨
+            </div>
+            <div
+              class="absolute -bottom-4 -right-4 text-3xl opacity-50 transform rotate-12 animate-[pulse_3s_infinite]">✨
+            </div>
+
+            <p class="font-sans text-base md:text-xl text-[#4a3f4e] leading-relaxed font-medium mb-4">
+              بصي بقى… سيبك من كل اللي فوق 😭<br>
+              الهدية الأساسية هنا حاجة ماتتوصفش.. أنا تعبت جامد عشان أجهزلك حاجة مخصوص تفرحك وتفصلك عن العالم شوية 💜
+            </p>
+            <p class="font-sans text-base md:text-xl text-[#4a3f4e] leading-relaxed font-medium mb-4">
+              وبصي بقى.. أنا مراقبك 🧐 وأول ما تنجحي وتضغطي على الزرار اللي تحت ده… هتلاقيني برن جرس الباب عندكم فورا
+              ومعايا البوكس! 😌🎁 فجهزي نفسك وحاولي تجيبيه!
+            </p>
+            <p
+              class="font-handwritten text-2xl md:text-3xl text-[#d81b60] font-bold p-3 bg-[#fce4ec] rounded-xl border border-pink-200">
+              بس فيه مشكلة صغيرة…<br>
+              الزرار تقيل شوية ومش أي حد يعرف يضغطه 👀👇
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Heavy Chasing Button Container -->
+      <div id="heavy-btn-container" class="absolute z-30 transition-all duration-300"
+        style="bottom: 8%; left: 50%; transform: translateX(-50%);">
+        <button id="runaway-btn"
+          class="bg-gradient-to-b from-[#d81b60] to-[#880e4f] text-white font-bold font-sans text-2xl md:text-3xl py-5 px-12 md:px-16 rounded-full shadow-[0_20px_0_#4a0017,0_30px_20px_rgba(0,0,0,0.5)] transition-all duration-100 ease-out border-4 border-[#ff80ab] hover:brightness-110 whitespace-nowrap">
+          اضغطي هنا 🎁
+        </button>
+        <div id="heavy-btn-msg"
+          class="absolute top-[120%] left-1/2 -translate-x-1/2 w-64 text-center font-handwritten text-2xl text-[#d81b60] font-bold opacity-0 translate-y-4 transition-all duration-300 pointer-events-none drop-shadow-md bg-white/80 p-2 rounded-xl border border-pink-200">
+        </div>
+      </div>
+    </section>
+
+    <!-- Final Message Section -->
+    <section class="min-h-screen flex items-center justify-center px-4 py-20 relative overflow-hidden">
+      <!-- Floating decorations -->
+      <div class="absolute top-20 right-10 text-dusty-pink opacity-25 animate-[bounce_6s_infinite]">
+        <i data-feather="heart" class="w-16 h-16 fill-current"></i>
+      </div>
+      <div class="absolute bottom-32 left-16 text-accent opacity-25 animate-[bounce_5s_infinite_1s]">
+        <i data-feather="star" class="w-12 h-12 fill-current"></i>
+      </div>
+      <div class="absolute top-1/3 left-1/4 text-dusty-pink opacity-20 animate-[spin_8s_linear_infinite]">
+        <i data-feather="star" class="w-10 h-10"></i>
+      </div>
+
+      <!-- Main card -->
+      <div class="max-w-3xl w-full relative z-10 fade-in-up">
+        <!-- Washi tape decorations -->
+        <div class="absolute -top-4 right-12 w-32 h-8 bg-[#ffd4a3] opacity-50 -rotate-3"></div>
+        <div class="absolute -top-4 left-12 w-32 h-8 bg-[#d4a59a] opacity-50 rotate-3"></div>
+
+        <div id="final-card"
+          class="bg-white rounded-3xl p-8 md:p-12 shadow-2xl cursor-pointer relative overflow-hidden hover:scale-[1.02] transition-transform duration-300"
+          style="background-image: radial-gradient(circle at 20px 20px, #F5EBE0 1px, transparent 1px); background-size: 40px 40px;">
+          <!-- Inner content -->
+          <div class="bg-white/95 rounded-2xl p-6 md:p-10 backdrop-blur-sm relative">
+            <div class="absolute top-0 left-8 w-2 h-full bg-accent opacity-10"></div>
+            <div class="absolute top-0 right-8 w-2 h-full bg-dusty-pink opacity-10"></div>
+
+            <div class="text-center mb-10">
+              <h2 class="font-heading text-4xl md:text-6xl text-soft-brown font-bold leading-loose">
+                ي رحمة...
+              </h2>
+            </div>
+
+            <div class="space-y-8 mb-10">
+              <p class="text-center font-sans text-lg md:text-2xl text-soft-brown leading-loose">
+                أتمنى السنة الجاية تكون مليانة ضحك وكل حاجة حلوة شبه قلبك.
+              </p>
+
+              <div class="text-center pt-6">
+                <p class="font-heading text-2xl md:text-4xl text-accent font-bold leading-loose"
+                  style="line-height: 1.6;">
+                  كل سنة وإنتي طيبة ومبسوطة ودايما في أحسن حال.. وتفضلي منورة الدنيا بضحكتك 💜✨
+                </p>
+              </div>
+
+              <div class="flex justify-center items-center gap-4 py-4">
+                <div class="w-12 h-1 bg-accent rounded"></div>
+                <i data-feather="heart" class="text-dusty-pink w-6 h-6 fill-current"></i>
+                <div class="w-12 h-1 bg-accent rounded"></div>
+              </div>
+
+              <p class="text-center pt-4 font-sans text-base md:text-xl text-soft-brown leading-loose opacity-90">
+                أتمنى تفضلي مبسوطة دايما 💜
+              </p>
+            </div>
+
+            <!-- Danger Warning Modal -->
+            <div id="danger-modal"
+              class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+              <div
+                class="bg-[#fff0f5] border-4 border-dashed border-[#d81b60] p-8 md:p-10 rounded-3xl max-w-md text-center transform scale-95 transition-transform duration-300 text-[#6d5b53] shadow-[0_20px_50px_rgba(216,27,96,0.3)] relative">
+                <!-- Cute tapes -->
+                <div
+                  class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/60 rotate-2 shadow-sm border border-white backdrop-blur-md">
+                </div>
+                <div
+                  class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 -rotate-3 shadow-sm border border-white backdrop-blur-md">
+                </div>
+
+                <h3 class="text-5xl font-handwritten text-[#d81b60] font-bold mb-4 mt-2">تحذير كيوت 🤫</h3>
+                <p class="text-xl mb-8 font-sans font-bold leading-relaxed">
+                  أنتِ متأكدة إنك عايزة تدوسي؟ الفضول ممكن يوديكي في داهية والموضوع مفيش منه رجوع! 🎀👀
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button id="cancel-danger-btn"
+                    class="px-6 py-3 bg-white text-[#d81b60] border-2 border-[#f48fb1] hover:bg-[#fce4ec] rounded-xl font-sans font-bold transition-all shadow-sm w-full sm:w-auto">
+                    لا خلاص خفت 🙈
+                  </button>
+                  <button id="confirm-danger-btn"
+                    class="px-6 py-3 bg-gradient-to-r from-[#f48fb1] to-[#d81b60] text-white hover:scale-105 rounded-xl font-sans font-bold transition-all shadow-md w-full sm:w-auto">
+                    هدوس واشوف إيه ده! ✨
+                  </button>
+                </div>
+              </div>
+            </div>
+            </p>
+          </div>
+
+          <div class="absolute top-4 right-4 w-8 h-8 bg-dusty-pink rounded-full opacity-60"></div>
+          <div class="absolute top-4 left-4 w-8 h-8 bg-accent rounded-full opacity-60"></div>
+          <div class="absolute bottom-4 right-4 w-8 h-8 bg-accent rounded-full opacity-60"></div>
+          <div class="absolute bottom-4 left-4 w-8 h-8 bg-dusty-pink rounded-full opacity-60"></div>
+
+          <div class="absolute top-0 left-1/4 w-20 h-6 bg-[#ffd4a3] opacity-60 -rotate-12"></div>
+          <div class="absolute bottom-0 right-1/4 w-20 h-6 bg-[#ffd4a3] opacity-60 rotate-12"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Warning Modal -->
+    <div id="warning-modal"
+      class="fixed inset-0 bg-black/60 flex items-center justify-center z-50 opacity-0 pointer-events-none transition-opacity duration-300 px-4">
+      <div id="warning-modal-content"
+        class="bg-[#fff0f5] border-4 border-dashed border-[#d81b60] p-8 md:p-12 rounded-3xl shadow-2xl max-w-lg w-full relative transform scale-90 translate-y-10 rotate-[-2deg] transition-all duration-300">
+        <!-- Cute tapes -->
+        <div
+          class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/60 rotate-2 shadow-sm border border-white backdrop-blur-md">
+        </div>
+        <div
+          class="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/40 -rotate-3 shadow-sm border border-white backdrop-blur-md">
+        </div>
+
+        <h3 class="font-handwritten text-5xl text-center text-[#d81b60] font-bold leading-relaxed mb-6 mt-2">
+          افتكري إني قولتلك بلاش 😭
+        </h3>
+
+        <div class="flex justify-center mb-8 relative">
+          <div class="relative inline-block group">
+            <img src="images/henedy.jpg" onerror="this.style.display='none'"
+              class="w-full max-w-[400px] rounded-2xl shadow-xl border-8 border-white rotate-[-3deg] group-hover:rotate-0 group-hover:scale-105 transition-all duration-300"
+              alt="Henedy" />
+            <div class="absolute -bottom-4 -right-4 text-5xl animate-bounce">🙈</div>
+            <div class="absolute -top-4 -left-4 text-4xl animate-[spin_4s_linear_infinite]">✨</div>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button id="warning-safe-btn"
+            class="w-full sm:w-auto bg-white border-2 border-[#f48fb1] text-[#d81b60] font-sans font-bold text-xl py-4 px-8 rounded-xl shadow-sm hover:bg-[#fce4ec] transition-all transform hover:-translate-y-1">
+            خلاص يعم مش دايسة 😌
+          </button>
+          <button id="warning-chaos-btn"
+            class="w-full sm:w-auto bg-gradient-to-r from-[#f48fb1] to-[#d81b60] text-white font-sans font-bold text-xl py-4 px-8 rounded-xl shadow-md hover:scale-105 transition-all">
+            برضه هدوس! 😭
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Bouquet Modal -->
+    <div id="bouquet-modal"
+      class="hidden fixed inset-0 bg-black/85 backdrop-blur-md z-[100] transition-opacity duration-1000 opacity-0 overflow-hidden">
+
+      <!-- Magical light behind the bouquet -->
+      <div class="absolute inset-0 bg-gradient-to-t from-pink-500/30 to-transparent pointer-events-none z-0"></div>
+
+      <!-- Text Content (Floating at the top) -->
+      <div
+        class="absolute top-12 md:top-20 left-1/2 -translate-x-1/2 text-center z-20 px-4 w-full max-w-4xl flex flex-col items-center">
+        <h2
+          class="font-handwritten text-5xl md:text-7xl text-white font-bold mb-4 drop-shadow-[0_5px_15px_rgba(0,0,0,0.8)] animate-pulse">
+          أحلى بوكيه لأحلى رحمة 💜
+        </h2>
+        <p
+          class="font-sans text-xl md:text-2xl text-pink-100 font-bold drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)] max-w-lg mx-auto bg-black/50 p-5 rounded-2xl backdrop-blur-md border border-white/20">
+          مبروك إنك قفلتي الخريطة كلها! البوكيه ده اتجمع وردة وردة مع كل خطوة مشيتيها هنا.. 💐✨
+        </p>
+      </div>
+
+      <!-- Action Button (Floating at the bottom) -->
+      <button id="close-bouquet-btn"
+        class="absolute bottom-10 md:bottom-16 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#d81b60] to-[#c2185b] text-white hover:scale-105 font-sans font-bold text-2xl py-4 px-12 rounded-full shadow-[0_0_40px_rgba(216,27,96,0.8)] border-4 border-white/50 transition-all animate-pulse z-30 cursor-pointer pointer-events-auto whitespace-nowrap w-max">
+        الورد يجنن بجد 😌
+      </button>
+
+      <!-- Bouquet Container (Slides up from bottom) -->
+      <div
+        class="absolute bottom-0 w-full transform translate-y-full transition-transform duration-1000 ease-[cubic-bezier(0.2,1,0.3,1)] z-10 pointer-events-none"
+        id="bouquet-container">
+        <img src="images/bouquet.jpg" alt="Massive Bouquet"
+          class="w-full h-[60vh] md:h-[75vh] object-cover md:object-contain object-bottom drop-shadow-[0_-20px_50px_rgba(255,105,180,0.3)] relative mx-auto max-w-5xl"
+          style="-webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%); mask-image: linear-gradient(to bottom, black 85%, transparent 100%);" />
+      </div>
+    </div>
+
+    <!-- Floating Secret Album Button -->
+    <button id="secret-album-btn"
+      class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 bg-[#d81b60] hover:bg-[#c2185b] text-white p-3 md:p-4 rounded-full shadow-[0_10px_20px_rgba(216,27,96,0.4)] transition-all hover:scale-110 flex items-center justify-center group animate-bounce-slow border-[3px] border-pink-200">
+      <span class="text-2xl md:text-3xl relative z-10">📒</span>
+
+      <!-- Permanent Bouncing Hint (Placed Above, aligned right) -->
+      <div id="album-btn-tooltip"
+        class="absolute bottom-[130%] right-0 bg-white text-[#d81b60] px-3 py-1.5 md:px-4 md:py-2 rounded-xl font-handwritten text-sm md:text-base font-bold shadow-lg whitespace-nowrap border-2 border-pink-200 pointer-events-none animate-bounce">
+        في ألبوم سري هنا! 👀 👇
+        <!-- Tail -->
+        <div class="absolute -bottom-1.5 right-4 w-3 h-3 bg-white border-b-2 border-r-2 border-pink-200 rotate-45">
+        </div>
+      </div>
+    </button>
+
+    <!-- Secret Album Modal -->
+    <div id="secret-album-modal"
+      class="fixed inset-0 z-[600] flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 bg-black/60 backdrop-blur-sm p-4 md:p-8">
+      <div
+        class="bg-gradient-to-br from-[#fff0f5] to-[#fce4ec] w-full max-w-5xl h-[85vh] md:h-[80vh] rounded-[2rem] shadow-2xl flex flex-col relative border-4 border-dashed border-[#d81b60] transform scale-95 transition-transform duration-300"
+        id="secret-album-content">
+
+        <!-- Washi Tapes -->
+        <div class="absolute -top-4 left-10 w-24 h-8 bg-[#ffd4a3] opacity-80 rotate-[-4deg] shadow-sm z-10"></div>
+        <div class="absolute -top-4 right-10 w-24 h-8 bg-[#f48fb1] opacity-80 rotate-[4deg] shadow-sm z-10"></div>
+
+        <!-- Modal Header -->
+        <div
+          class="p-5 md:p-8 border-b-2 border-dashed border-[#f48fb1] flex justify-between items-center bg-white/60 rounded-t-[2rem] relative z-20">
+          <div>
+            <h2 class="font-handwritten text-3xl md:text-5xl text-[#d81b60] font-bold drop-shadow-sm">الألبوم السري 🤫📒
+            </h2>
+            <p class="font-sans text-sm md:text-base text-[#4a3f4e] font-bold mt-2 animate-pulse">أهم استيكرز عند رحمة
+              👇😂</p>
+          </div>
+          <button id="close-album-btn"
+            class="text-3xl text-gray-500 hover:text-red-500 transition-colors w-12 h-12 flex items-center justify-center bg-white rounded-full shadow-sm hover:rotate-90 duration-200">
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal Body (Grid of Stickers) -->
+        <div class="p-6 md:p-8 overflow-y-auto flex-1 relative z-20">
+          <div id="stickers-grid"
+            class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-8 auto-rows-max items-center justify-items-center">
+            <!-- Stickers will be injected here via JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/tracker.js"></script>
+  <script src="js/loading.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/dictionary.js"></script>
+  <script src="js/warning.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/creator.js"></script>
+  <script src="js/mobileWarning.js"></script>
+  <script src="js/finalCard.js"></script>
+  <script src="js/impossibleGift.js"></script>
+  <script src="js/cassette.js"></script>
+  <script src="js/miniWorld.js"></script>
+  <script src="js/secretAlbum.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+.stripes {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 19px,
+    currentColor 19px,
+    currentColor 20px
+  );
+}

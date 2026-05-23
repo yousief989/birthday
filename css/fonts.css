@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@400;700&family=Cairo:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+.font-heading {
+  font-family: 'Cairo', sans-serif;
+}
+
+:root {
+  --scrapbook-brown: #5a4a42;
+}
+
+.font-handwritten {
+  font-family: 'Aref Ruqaa', cursive;
+  line-height: 1.6;
+  color: var(--scrapbook-brown);
+}
