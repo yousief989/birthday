@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loginBtn.classList.add('opacity-50', 'cursor-not-allowed');
 
       setTimeout(() => {
-        if (pass === '3id_melad_abou_el_fasad') {
+        if (pass === 'rahooma_ashter_shatoora') {
           loginSuccess.classList.remove('hidden');
 
           // Send Discord notification
